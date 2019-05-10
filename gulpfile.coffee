@@ -24,7 +24,7 @@ config =
     styles: "app/styles"
     assets: "app/assets"
 
-  serverPort: 9000
+  serverPort: 9001
 
   webpack: ->
     resolveLoader:
@@ -71,9 +71,6 @@ config =
 
       plugins: [
         new webpack.optimize.DedupePlugin()
-        new webpack.optimize.UglifyJsPlugin(
-          compressor: { warnings: false }
-        )
       ]
 
 config = _(config).mapObject (val) ->
